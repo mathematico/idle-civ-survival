@@ -53,7 +53,6 @@ function timecheck (){
     if (play==true){
       updategame()
     }
-setInterval(timecheck, tickspeed)
 }
 function fplay(){
 play=true
