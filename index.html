@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>idle civ surival</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<body>
+
+  <h2>idle civ surival</h2>
+  <p id="top_"></p>
+
+  <button class="bspeed" onclick="fplay()">play</button>
+  <button class="bspeed" onclick="fstop()">stop</button>
+  <button class="bspeed" onclick="fonetic()">tic</button>
+
+
+<div class="w3-bar w3-black">
+  <button class="btab" onclick="opentab('Economy')">Economy</button>
+  <button class="btab" onclick="opentab('Defense')">Defense</button>
+  <button class="btab" id="ntab" style="display:none" onclick="opentab('Knowledge')">Knowledge</button>
+  <button class="btab" onclick="opentab('Settings')">Settings</button>
+</div>
+
+<div id="Economy" class="tab"  style="display:none">
+  <button id="bm" class="button" onclick="buyminer()">buy miner</button>
+  <button id="bmm" class="button" onclick="buymaxminer()">buy max miner</button>
+   <p id="eco_"></p>
+</div>
+
+<div id="Defense" class="tab" style="display:none">
+  <button id="bs" class="button" onclick="buysligner()">buy sligner</button>
+  <button id="bms" class="button" onclick="buymaxsligner()">buy max sligner</button>
+   <p id="def_"></p>
+</div>
+
+<div id="Knowledge" class="tab" style="display:none">
+    <p id="Know_"></p>
+   <p>nothing yet</p>
+</div>
+<div id="Settings" class="tab" style="display:none">
+  Keep play going after dying: <input type="checkbox" id="skeepplay" >
+  autobuyminer: <input type="checkbox" id="sautominer" >
+  autobuysligner: <input type="checkbox" id="sautosligner" >
+</div>
+<script src="js/math.js"></script>
+ <script src="js/display.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/buy.js"></script>
+
+
+</body>
+</html>
