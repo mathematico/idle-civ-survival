@@ -20,6 +20,7 @@
   <button class="btab" onclick="opentab('Defense')">Defense</button>
   <button class="btab" id="ntab" style="display:none" onclick="opentab('Knowledge')">Knowledge</button>
   <button class="btab" onclick="opentab('Settings')">Settings</button>
+  <button class="btab" onclick="opentab('Save_load')">Save/load</button>
 </div>
 
 <div id="Economy" class="tab"  style="display:none">
@@ -43,7 +44,19 @@
   autobuyminer: <input type="checkbox" id="sautominer" >
   autobuysligner: <input type="checkbox" id="sautosligner" >
 </div>
+<div id="Save_load" class="tab" style="display:none">
+  <button onclick="save(0)">save auto</button>
+  <button onclick="load(0)">load auto</button>
+  <button onclick="save(1)">save slot 1</button>
+  <button onclick="load(1)">load slot 1</button>
+  <button onclick="save(2)">save slot 2</button>
+  <button onclick="load(2)">load slot 2</button>
+  <button onclick="save(3)">save slot 3</button>
+  <button onclick="load(3)">load slot 3</button>
+</div>
+
 <script src="js/math.js"></script>
+<script src="js/save.js"></script>
  <script src="js/display.js"></script>
   <script src="js/main.js"></script>
   <script src="js/buy.js"></script>

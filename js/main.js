@@ -1,3 +1,5 @@
+var var_version=1
+var savevar=0
 var time=0
 var gold=0
 var gold_miner = 1
@@ -11,7 +13,6 @@ var play=false
 var knowledge = 0
 var tknowledge=0
 var tickspeed=1000
-
 function init(){
     time=0
     gold=0+knowledge
@@ -64,6 +65,10 @@ function fonetic(){
 updategame()
 }
 setInterval(timecheck, tickspeed)
+function saveauto(){
+save(0)
+console.log("saved")
+}setInterval(saveauto,30000)
 function updategame(){
   gold+=gold_miner
   time+=1
@@ -86,6 +91,7 @@ function updategame(){
   updatetext()
 }
 init()
+load(0)
 updatetext()
 function dead(){
   tknowledge+=math.floor(math.pow(1.08,time)/9)
