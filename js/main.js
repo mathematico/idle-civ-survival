@@ -32,9 +32,9 @@ function init(){
   }
 }
 function updatetext(){
-  document.getElementById("top_").innerHTML ="time =" + math.format(time,{notation: 'auto',precision:3})  + " gold =" + math.format(gold,{notation: 'auto',precision:3})+" defense =" + math.format(defense,{notation: 'auto',precision:3})
-  + " enemy_attack =" + math.format(enemy_attack_growth,{notation: 'auto',precision:3})  ;
-  document.getElementById("Know_").innerHTML ="knowledge pts =" + math.format(knowledge,{notation: 'auto',precision:3})
+  document.getElementById("top_").innerHTML ="time =" + mf(time)  + " gold =" + mf(gold)+" defense =" + mf(defense)
+  + " enemy_attack =" + mf(enemy_attack_growth)  ;
+  document.getElementById("Know_").innerHTML ="knowledge pts =" + mf(knowledge)
   document.getElementById("bm").innerHTML= "buy miner " + mf(gold_miner_price)+" G"
   a=math.floor(math.log(gold/gold_miner_price,2))
   if (a<0){a=0}
@@ -45,7 +45,7 @@ function updatetext(){
   document.getElementById("def_").innerHTML= "you have " + mf(sligner) + " sligners"
 }
 function mf(a){
-  return math.format(a,{notation: 'auto',precision:3})
+  return math.format(a,{notation: 'auto',precision:4})
 
 }
 function timecheck (){
@@ -74,7 +74,7 @@ function updategame(){
     dead()
   }
   enemy_attack_growth = math.floor(math.pow(1.1,time))
-  updatetext()
+
   if (sautominer.checked == true){
   buymaxminer()
   buyminer()
@@ -83,7 +83,7 @@ function updategame(){
   buymaxsligner()
   }
 
-
+  updatetext()
 }
 init()
 updatetext()
